@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and Push Docker image
         env:
-          DOCKER_REGISTRY: registry.digitalocean.com/<your-registry-name>
+          DOCKER_REGISTRY: registry.digitalocean.com/petshop123
         run: |
-          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u <your-docker-username> --password-stdin $DOCKER_REGISTRY
-          docker buildx build --push --tag $DOCKER_REGISTRY/<your-image-name>:<version> .
+          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u dop_v1_84774aee93da4d943626f8ddc4b1f182ad886767b430819b3e7b0d33e3bbdfa5 --password-stdin $DOCKER_REGISTRY
+          docker buildx build --push --tag $DOCKER_REGISTRY/backend:latest .
